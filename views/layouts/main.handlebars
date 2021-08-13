@@ -1,48 +1,52 @@
-<!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8" >
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FOS-Coffee</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-<link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FOS-Coffee</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
 
-  <nav class="flush">
-    <div class="nav-wrapper">
-      <ul id="nav" class="row">
-        <li><a class="logo-text valign-wrapper" style="height: 60px;" href="/">F<img id="logo" src="/assets/coffee-pot.png">S</a></li>
-        <li><a href="/menu">Menu</a></li>
-        {{#if loggedIn}}
-        <li><a href="/profile">Profile</a></li>
-        <li><a href="/" id="logout">Logout</a></li>
-        {{else}}
-        <li><a href="/login">Login</a></li>
-        <li><a class="hide" href="/profile">Profile</a></li>
-        <li><a class="hide" href="/" id="logout">Logout</a></li>
-        {{/if}}
-        <li><a href="/signup">Signup</a></li>
-        <li id="cart-link"><a class="flush" style="height: 30px;" href="/checkout"><img id="cart" src="/assets/shopping-cart-icon.png"></a></li>
-      </ul>
+    <nav class="flush">
+      <div class="nav-wrapper">
+        <ul id="nav" class="row">
+          <li><a
+              class="logo-text valign-wrapper"
+              style="height: 60px;"
+              href="/"
+            >F<img id="logo" src="/assets/coffee-pot.png" />S</a></li>
+          <li><a href="/menu">Menu</a></li>
+          {{#if loggedIn}}
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/" id="logout">Logout</a></li>
+          {{else}}
+            <li><a href="/login">Login</a></li>
+            <li><a class="hide" href="/profile">Profile</a></li>
+            <li><a class="hide" href="/" id="logout">Logout</a></li>
+          {{/if}}
+          <li><a href="/signup">Signup</a></li>
+          <li id="cart-link"><a
+              class="flush"
+              style="height: 30px;"
+              href="/checkout"
+            ><img id="cart" src="/assets/shopping-cart-icon.png" /></a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="wrapper">
+      {{{body}}}
     </div>
-  </nav>
-<div class='wrapper'>
-  {{{body}}}
-  </div>
 
-
-
-
-  <footer>
-    <p>© Andrew Kim 2021</p>
-    <p>Published under the MIT license.</p>
-  </footer>
-<script src="/js/logout.js"></script>
-</body>
-
-
-
+    <footer>
+      <p>© Andrew Kim 2021</p>
+      <p>Published under the MIT license.</p>
+    </footer>
+    <script src="/js/logout.js"></script>
+  </body>
 
 </html>

@@ -1,5 +1,5 @@
-const router = require('express').Router();
+const router = require("express").Router();
 
-const masterRoutes = require('./masterRoutes');
+const masterRoutes = require("./masterRoutes");
 
 module.exports = router;
